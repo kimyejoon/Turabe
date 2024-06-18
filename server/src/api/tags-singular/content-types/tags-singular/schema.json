@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tags_plural",
+  "info": {
+    "singularName": "tags-singular",
+    "pluralName": "tags-plural",
+    "displayName": "Tags"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Tags": {
+      "type": "string"
+    },
+    "videos": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::videos-singular.videos-singular",
+      "mappedBy": "tags"
+    }
+  }
+}
